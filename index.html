@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="overlay">
+        <div class="main">
+            <h1>"Control form"</h1>
+            <div class="form">
+                <form>
+                    <label class="lab">ProductName :</label>
+                    <input class="inf" id="productName" type="text">
+                    <div class="space"></div>
+                    <label class="lab">ProductPrice :</label>
+                    <input class="inf" id="productPrice" type="number">
+                    <div class="space"></div>
+                    <label class="lab">ProductCategory :</label>
+                    <input class="inf" id="productCategory" type="text">
+                    <div class="space"></div>
+                    <label class="lab">ProductDescription :</label>
+                    <textarea class="inf" id="productDescription" type="text"></textarea>
+                    <div class="space"></div>
+                    <button class="btn btn-outline-info" id="addBtn" onclick="addProduct()">Add Product</button>
+                </form>
+            </div>    
+           
+            <div class="container">
+                <input class="srch inf" type="text" placeholder="Search Product" onkeyup="searchProduct(this.value)">
+                <table class="table mt-4">
+                    <thead>
+                        <th>Index</th>
+                        <th>ProductName</th>
+                        <th>ProductPrice</th>
+                        <th>ProductCategory</th>
+                        <th>ProductDesc</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="tableData"></tbody>
+                </table>
+            </div>
+            <div id="update"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
